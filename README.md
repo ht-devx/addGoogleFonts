@@ -5,7 +5,7 @@ A plugin that quickly imports all available styles (such as bold and italic vari
 **Preview / Demo:** [jsfiddle.net/ht_dev/4n8xk2p3](https://jsfiddle.net/ht_dev/4n8xk2p3)\
 **Author:** HT ([@ ht-devx](https://github.com/ht-devx))\
 **Release date:** 2024-03-08\
-**Last updated:** 2024-03-08 2:08PM [GMT-8]
+**Last updated:** 2024-03-08 3:08PM [GMT-8]
 
 ---
 
@@ -42,8 +42,8 @@ To apply the fonts, specify the font name as the `font-family` of your component
 ```
 In the above example, `sans-serif` and `serif` are fallbacks in case the intended fonts fail to load properly, or are slow to load.
 
-Preview how it all comes together:\
-[jsfiddle.net/ht_dev/4n8xk2p3](https://jsfiddle.net/ht_dev/4n8xk2p3)]
+Preview of how it all comes together:\
+[jsfiddle.net/ht_dev/4n8xk2p3](https://jsfiddle.net/ht_dev/4n8xk2p3)
 
 #### Usage notes:
 * Feel free to incorporate as many fonts as desired, provided that they are available on [Google Fonts](https://fonts.google.com/).
