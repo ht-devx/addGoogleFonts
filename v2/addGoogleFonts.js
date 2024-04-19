@@ -94,18 +94,24 @@ window.addGoogleFonts = (googleFontsList, opts) => {
                 let varRange = findFont.axes;
                 if(varRange){
                   if(Array.isArray(varRange)){
-                    if(varRange[0].start && varRange[0].end){
-                      let min = varRange[0].start;
-                      let max = varRange[0].end;
-                      let currentFont = `${font}:ital,wght@0,${min}..${max};1,${min}..${max}`;
-                      finalFontsArray.push(currentFont);
-                      
-                      if(opts && (opts.logs == true || opts.logs == "true")){                        
-                        console.info(`${font}: variable, from ${min} to ${max}`);
+                    console.info(varRange)
+                    
+                    for(let axis of varRange){
+                      if(axis.tag == "wght"){
+                        if(axis.start && axis.end){
+                          let min = axis.start;
+                          let max = axis.end;
+                          
+                          let currentFont = `${font}:ital,wght@0,${min}..${max};1,${min}..${max}`;
+                          finalFontsArray.push(currentFont);
+
+                          if(opts && (opts.logs == true || opts.logs == "true")){                        
+                            console.info(`${font.replaceAll("+"," ")}: variable, from ${min} to ${max}`);
+                          }
+                        }
                       }
-                      
                     }
-                  }
+                  }//end: if axes is an array
                 }//end: if "axes" exists
               }//end: is variable font
               
