@@ -69,7 +69,7 @@ window.addGoogleFonts = (googleFontsList, opts) => {
       
       /*---------------------------------*/
       
-      fetch("https://www.googleapis.com/webfonts/v1/webfonts?%6B%65%79=%41%49%7A%61%53%79%44%50%59_%68%4C%56%39%4D%50%71%65%6F%45%6A%45%42%77%77%33%67%32%35%45%69-nUesykA&capability=VF")
+      fetch("https://gfonts-glen.netlify.app/.netlify/functions/api")
       .then(response => response.json())
       .then(res => {
 
