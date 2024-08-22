@@ -94,7 +94,7 @@ window.addGoogleFonts = (googleFontsList, opts) => {
                 let varRange = findFont.axes;
                 if(varRange){
                   if(Array.isArray(varRange)){
-                    console.info(varRange)
+                    //console.info(varRange)
                     
                     for(let axis of varRange){
                       if(axis.tag == "wght"){
