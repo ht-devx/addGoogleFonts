@@ -5,7 +5,7 @@ A plugin that quickly imports all available styles (such as bold and italic vari
 **Preview / Demo:** [jsfiddle.net/ht_dev/4n8xk2p3](https://jsfiddle.net/ht_dev/4n8xk2p3)\
 **Author:** HT ([@ ht-devx](https://github.com/ht-devx))\
 **Release date:** 2024-03-08\
-**Last updated:** 2024-03-08 3:08PM [GMT-8]
+**Last updated:** 2024-08-22 4:05PM [GMT-7]
 
 ---
 
@@ -63,14 +63,14 @@ addGoogleFonts("Albert Sans", "Bona Nova");
 ---
 
 #### How it Works:
+<sub>This explanation is of **version 2 (2024-08-22)**.</sub>  
+<sup>For the explanation for **version 1 (2024-03-08)**, please see [this](https://github.com/ht-devx/addGoogleFonts/blob/main/v1/README.md).</sup>
 1. This plugin checks if `fonts.googleapis.com` and `fonts.gstatic.com` Google Fonts stylesheets exist on the page, and adds them if they don't already exist.
-2. Makes a `fetch` request to `fonts.googleapis.com` to check if the fonts specified by the user exist.
-3. Once verified, make a `fetch` request for each `font-weight` (`100, 200, 300, 400, 500, 600, 700, 800, 900`), regardless if that particular font has it or not. For example, the [Itim](https://fonts.google.com/specimen/Itim) font only has `400` available, so it will return a negative value for all other weights it does not have.
-4. If the font only has one `font-weight` available, add it as well as its italic counterpart.
-5. If the font has multiple `font-weight` options available, make another `fetch` request for a [variable font weight range](https://fonts.google.com/knowledge/using_type/loading_variable_fonts_on_the_web).\
-— If it succeeds, that font is a variable font. Proceed with the variable range as well as its italic counterpart.\
-— If it fails, that font is not a variable font and each `font-weight` needs to be loaded separately (along with its italic counterpart) rather than specifying a range.
-7. Lastly, combine all fonts' strings together and load them as a single stylesheet.
+2. Makes a `fetch` request to `fonts.googleapis.com` API to retrieve a complete object list of available fonts.
+3. Scans the object result to check if the specified fonts exist.
+4. If the font has an `"axes"` property with `"tag": "wght"`, it is a variable font. Proceed with the [variable range](https://fonts.google.com/knowledge/using_type/loading_variable_fonts_on_the_web) as well as its italic counterpart.
+5. Otherwise, the font is not a variable font, each `font-weight` needs to be added separately with its italic counterpart, and can be found under the `"variants"` property.
+6. Lastly, combine all fonts' strings together and load them as a single stylesheet.
 
 ---
 
