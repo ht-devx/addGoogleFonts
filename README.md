@@ -24,7 +24,7 @@ A plugin that quickly imports all available styles (such as bold and italic vari
 
 Include the following after `<head>`:
 ```html
-<script src="https://cdn.jsdelivr.net/gh/ht-devx/addGoogleFonts/addGoogleFonts.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ht-devx/addGoogleFonts/v2/addGoogleFonts.min.js"></script>
 <script>
 addGoogleFonts("Albert Sans, Bona Nova");
 </script>
