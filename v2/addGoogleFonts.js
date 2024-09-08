@@ -69,7 +69,7 @@ window.addGoogleFonts = (googleFontsList, opts) => {
       
       /*---------------------------------*/
       
-      fetch("https://gfonts-glen.netlify.app/.netlify/functions/api")
+      fetch("https://glen-api.gitlab.io/public/gfonts-2024-09-08.json")
       .then(response => response.json())
       .then(res => {
 
