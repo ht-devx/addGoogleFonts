@@ -69,7 +69,7 @@ window.addGoogleFonts = (googleFontsList, opts) => {
       
       /*---------------------------------*/
       
-      fetch("https://glen-api.gitlab.io/public/gfonts-2025-01-26.json")
+      fetch("https://glen-api.gitlab.io/public/gfonts-2025-02-18.json")
       .then(response => response.json())
       .then(res => {
 
