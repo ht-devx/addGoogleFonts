@@ -5,7 +5,7 @@ A plugin that quickly imports all available styles (such as bold and italic vari
 **Preview / Demo:** [jsfiddle.net/ht_dev/4n8xk2p3](https://jsfiddle.net/ht_dev/4n8xk2p3)\
 **Author:** HT ([@ ht-devx](https://github.com/ht-devx))\
 **Release date:** 2024-03-08\
-**Last updated:** 2024-08-22 4:05PM [GMT-7]
+**Last updated:** 2026-01-20 6:04PM [GMT-8]
 
 ---
 
@@ -20,7 +20,7 @@ A plugin that quickly imports all available styles (such as bold and italic vari
 
 ---
 
-#### How to use:
+### How to use:
 
 Include the following after `<head>`:
 ```html
@@ -46,7 +46,9 @@ In the above example, `sans-serif` and `serif` are fallbacks in case the intende
 Preview of how it all comes together:\
 [jsfiddle.net/ht_dev/4n8xk2p3](https://jsfiddle.net/ht_dev/4n8xk2p3)
 
-#### Usage notes:
+---
+
+### Usage notes:
 * Feel free to incorporate as many fonts as desired, provided that they are available on [Google Fonts](https://fonts.google.com/).
 * Font names should be separated by a comma `,` and should stay within the quotation marks `""`.
 
@@ -60,9 +62,16 @@ addGoogleFonts("Albert Sans, Bona Nova");
 addGoogleFonts("Albert Sans", "Bona Nova");
 ```
 
+You can switch the provider from Google Fonts to [Bunny Fonts](https://fonts.bunny.net/about) by adding `{ bunnyFonts: true }` like so:
+```js
+addGoogleFonts("Albert Sans", "Bona Nova", {
+    bunnyFonts: true
+});
+```
+
 ---
 
-#### How it Works:
+### How it Works:
 <sub>This explanation is of **version 2 (2024-08-22)**.</sub>  
 <sup>For the explanation for **version 1 (2024-03-08)**, please see [this](https://github.com/ht-devx/addGoogleFonts/blob/main/v1/README.md).</sup>
 1. This plugin checks if `fonts.googleapis.com` and `fonts.gstatic.com` Google Fonts stylesheets exist on the page, and adds them if they don't already exist.
@@ -74,19 +83,21 @@ addGoogleFonts("Albert Sans", "Bona Nova");
 
 ---
 
-#### Attribution:
+### Attribution:
 No visible credit/attribution is required, but please do not remove the credits situated within the JS file(s). A link to this repository would be greatly appreciated!
 
 ---
 
-#### Troubleshooting:
+### Troubleshooting:
 If you need further assistance, please contact me at: [hello.ht.dev@gmail.com](mailto:hello.ht.dev@gmail.com)
 
 ---
 
-#### Credits:
+### Credits:
 
 Evidently, [Google Fonts](https://fonts.google.com/).
+
+[Bunny Fonts](https://fonts.bunny.net) for an alternative fonts provider.
 
 Based on [@rachaelthemes](https://github.com/rachaelthemes)' [customFonts.js](https://rachaelthemes.com/custom-fonts):
 > A script that takes a provided font (or fonts) and automatically calls a Google Fonts script to load those fonts.
